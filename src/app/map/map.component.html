@@ -1,5 +1,10 @@
 
+<div *ngIf="overlayIsActive()" class="overlay"></div>
 <div class="tap-container" (click)="showCoordinates($event)">
-
+    <div [class.show]="showDialog" class="dialog">
+        <div>x: {{xCoordinate}}</div>
+        <div>y: {{yCoordnate}}</div>
+        <button class="button btn primary-button">Conferma</button>
+    </div>
 </div>
 
